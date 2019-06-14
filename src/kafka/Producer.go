@@ -1,4 +1,4 @@
-package main
+package kafka
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ import (
 
 const (
 	kafkaConn = "localhost:9092"
-	topic     = "output-data"
+	producerTopic     = "output-data"
 	filepath  = "E://temp//SAP.txt"
 )
 
@@ -52,7 +52,7 @@ func initProducer() (sarama.SyncProducer, error) {
 
 func publish(message string, producer sarama.SyncProducer) {
 	msg := &sarama.ProducerMessage{
-		Topic: topic,
+		Topic: producerTopic,
 		Value: sarama.StringEncoder(message),
 	}
 	p, o, err := producer.SendMessage(msg)
