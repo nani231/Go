@@ -10,9 +10,9 @@ import (
 )
 
 const (
-	kafkaConn = "localhost:9092"
-	producerTopic     = "output-data"
-	filepath  = "E://temp//SAP.txt"
+	kafkaConn     = "localhost:9092"
+	producerTopic = "output-data"
+	filepath      = "E://temp//SAP.txt"
 )
 
 func main() {
