@@ -13,7 +13,7 @@ import (
 const (
 	zookeeperConn = "localhost:2181"
 	cgroup        = "zgroup"
-	consumerTopic         = "output-data"
+	consumerTopic = "output-data"
 )
 
 var loc, _ = time.LoadLocation("UTC")
